@@ -14,12 +14,13 @@ import {  } from 'ng2-charts';
 
 export class Grafica1Component {
 
-  public labels: string[] = ['hola','2' ];
+  labels: string[] =  ['Zapatos','Medias','Camisas','Shorts' ];
 
 
   public data1: ChartData<'doughnut'> = {
+    labels: this.labels,
     datasets: [
-           { data: [100, 50, 10] },
+           { data: [100, 50, 10,30] },
     ],
   };
 

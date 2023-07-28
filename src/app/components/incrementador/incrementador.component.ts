@@ -21,8 +21,6 @@ export class IncrementadorComponent implements OnInit {
   }
 
 
- 
-
   cambiarValor(valor: number){
 
     if(this.progreso>=100 && valor >= 0){

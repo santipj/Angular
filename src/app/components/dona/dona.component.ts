@@ -9,28 +9,16 @@ import { ChartData, ChartEvent, Color } from 'chart.js';
 })
 export class DonaComponent {
 
-  @Input() titulo: string = '';
+  @Input() titulo: string = 'Sin Titulo';
+  @Input('labels') labels: String[] = ['Datas 1', 'Datas 2', 'Datas 3','data 4','data 5' ];
   
-  get tituloGrafica(){
-    if(this.titulo == ''){
-      return this.titulo = 'Sin Titulo'
-    }else{
-      return this.titulo;
-    }
-  };
-
-  @Input() labels: String[] = [
-    'Datas 1',
-    'Datas 2',
-    'Datas 3',
-  ];
 
 
 
   @Input('data') doughnutChartData: ChartData<'doughnut'> = {
     labels: this.labels,
     datasets: [
-      { data: [250, 130, 70] },
+      { data: [250, 130, 70,76,43] },
     ],
   };
         
